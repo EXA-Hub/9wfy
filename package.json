@@ -9,6 +9,7 @@
     "web": "expo start --web",
     "ts:check": "tsc"
   },
+  "type": "module",
   "dependencies": {
     "expo": "~49.0.15",
     "expo-status-bar": "~1.6.0",
