@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, Text, View, Switch } from "react-native";
+import { StyleSheet, Image, Text, View, Switch } from "react-native";
 
 interface NavbarProps {
   theme: "dark" | "light" | null | undefined;
@@ -8,11 +8,18 @@ interface NavbarProps {
 
 export default function Navbar({ theme, toggleTheme }: NavbarProps) {
   return (
-    <View style={styles.navbar}>
+    <View
+      style={
+        theme === "dark"
+          ? { ...styles.navbar, backgroundColor: "black" }
+          : styles.navbar
+      }
+    >
+      <Image source={require(".././assets/favicon.png")} />
       <Text
         style={theme === "dark" ? styles.darkThemeText : styles.lightThemeText}
       >
-        Navbar
+        صوفي الأسطورة 🥳 يس
       </Text>
       <Switch value={theme === "dark"} onValueChange={toggleTheme} />
     </View>
@@ -25,16 +32,18 @@ const styles = StyleSheet.create({
     top: 0,
     height: 60,
     width: "100%",
-    backgroundColor: "transparent",
+    backgroundColor: "yellow",
     alignItems: "center",
     justifyContent: "space-between",
     flexDirection: "row",
     paddingHorizontal: 10,
   },
   lightThemeText: {
+    fontFamily: "custom-font",
     color: "#242c40",
   },
   darkThemeText: {
     color: "#d0d0c0",
+    fontFamily: "custom-font",
   },
 });

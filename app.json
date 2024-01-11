@@ -1,5 +1,13 @@
 {
   "expo": {
+    "plugins": [
+      [
+        "expo-notifications",
+        {
+          "sounds": ["./assets/sounds/sfx1.mp3"]
+        }
+      ]
+    ],
     "name": "9wfy",
     "slug": "9wfy",
     "version": "1.0.0",
@@ -23,6 +31,12 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "8a1d6272-249f-4980-88e0-16fa61ddbe26"
+      }
+    },
+    "owner": "zampx"
   }
 }
